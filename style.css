@@ -1,25 +1,47 @@
+:root {
+  /* Color vars */
+  --font-color: #000;
+
+
+  /* Space vars */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 60px;
     font-family: "Esteban", serif;
 }
 
 header {
     font-family: "Esteban", serif;
-
-}
-
-.teams {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minma);
-}
-
-.logo {
-
+    font-size: 48px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg) var(--space-xl);
 }
 
 .about {
 
 }
 
-.teams {
+.logo {
+    text-align: center;
 
+}
+
+.teams {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }

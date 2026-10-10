@@ -20,11 +20,12 @@ include 'data.php';
 <body>
 
     <header>
+        <div class="logo">Womans Europa Cup</div>
+
         <nav>
             <a class="about" href="about.php">About</a>
         </nav>
         
-        <div class="logo">Womans Europa Cup</div>
     </header>
 
     <main>
@@ -42,6 +43,7 @@ include 'data.php';
                 <h2><?= htmlspecialchars($name) ?></h2>
                 
                 <!--Makes the text in HTML safer-->
+                <!--Includes special caracters-->
                 <img
                     src="<?= htmlspecialchars($team['logo_uefa']) ?>"
                     alt="<?= htmlspecialchars($name) ?> logo"
