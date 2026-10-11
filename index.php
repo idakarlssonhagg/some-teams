@@ -24,8 +24,7 @@ include 'data.php';
 
         <nav>
             <a class="about" href="about.php">About</a>
-        </nav>
-        
+        </nav>  
     </header>
 
     <main>
@@ -38,16 +37,29 @@ include 'data.php';
         <?php foreach ($teams as $name => $team): ?>
 
             <!--Class for each individual team--> 
-            <div class="team"> 
-                
+            <div class="team-card"> 
+
+                <div class="team-card-inner">
+
+                <!-- Front of the card -->
+                <div class="team-front">
+
+                    <!--Includes special caracters-->
+                    <img
+                        src="<?= htmlspecialchars($team['logo_uefa']) ?>"
+                        alt="<?= htmlspecialchars($name) ?> logo"
+                    >
+                    <!-- Safely handles special characters -->
+                    <h2><?= htmlspecialchars($name) ?></h2>
+
+                    <p>Click to read more!</p>
+
+            </div>
+
+            <!--Back of the card -->
+            <div class="card-back"> 
+
                 <h2><?= htmlspecialchars($name) ?></h2>
-                
-                <!--Makes the text in HTML safer-->
-                <!--Includes special caracters-->
-                <img
-                    src="<?= htmlspecialchars($team['logo_uefa']) ?>"
-                    alt="<?= htmlspecialchars($name) ?> logo"
-                >
 
                 <p>League: <?= htmlspecialchars($team['league']) ?></p>
                 <p>City: <?= htmlspecialchars($team['city']) ?> </p>
@@ -61,7 +73,15 @@ include 'data.php';
                     Visit their club website! <!--Don't need a <p> since it's a link-->
                 </a>
 
+                <!-- Link to return to the front of the card --> 
+                <label for="card-<?= htmlspecialchars($name) ?>"
+                    class="back-to-front"> 
+                    Back to logo 
+                </label>
+
             </div>
+        </div>
+    </div>
 
         <?php endforeach; ?>
 
