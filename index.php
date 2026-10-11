@@ -13,7 +13,7 @@ include 'data.php';
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Esteban&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Esteban&family=Fjalla+One&display=swap" rel="stylesheet">
 
 </head>
 
@@ -38,26 +38,34 @@ include 'data.php';
 
             <!--Class for each individual team--> 
             <div class="team-card"> 
+                <input
+                type="checkbox"
+                id="card-<?= htmlspecialchars($name) ?>"
+                class="card-toggle"
+                >
 
                 <div class="team-card-inner">
 
                 <!-- Front of the card -->
                 <div class="team-front">
 
-                    <!--Includes special caracters-->
-                    <img
-                        src="<?= htmlspecialchars($team['logo_uefa']) ?>"
-                        alt="<?= htmlspecialchars($name) ?> logo"
-                    >
                     <!-- Safely handles special characters -->
                     <h2><?= htmlspecialchars($name) ?></h2>
-
-                    <p>Click to read more!</p>
+                    
+                    <!--Includes special caracters-->
+                    <img
+                        alt="<?= htmlspecialchars($name) ?> logo"
+                        src="<?= htmlspecialchars($team['logo_uefa']) ?>"
+                    >
+                    
+                <label for="card-<?= htmlspecialchars($name) ?>"> 
+                    Click to read more!
+                </label>
 
             </div>
 
             <!--Back of the card -->
-            <div class="card-back"> 
+            <div class="team-back"> 
 
                 <h2><?= htmlspecialchars($name) ?></h2>
 

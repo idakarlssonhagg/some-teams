@@ -18,11 +18,11 @@
 body {
     background-color: lightblue;
     margin: 60px;
-    font-family: "Esteban", serif;
+    font-family: "Fjalla One", serif;
 }
 
 header {
-    font-family: "Esteban", serif;
+    font-family: "Fjalla One", serif;
     font-size: 48px;
     text-align: center;
     display: flex;
@@ -38,7 +38,7 @@ h1 {
 }
 
 main {
-    background-color: lightblue
+    background-color: lightblue;
     padding: 30px;
 }
 
@@ -50,12 +50,18 @@ a {
 .about {
     text-decoration: none;
     color: black;
+    font-size: 24px;
 
 }
 
 /* Hide the checkbox*/
 .card-toggle {
     display: none;
+}
+
+/* Flips when the checkbox is clicked*/
+.card-toggle:checked + .team-card-inner {
+    transform: rotateX(180deg);
 }
 
 .logo {
@@ -74,7 +80,7 @@ a {
 .teams {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 30px 20px;
     max-width: 1100px;
     row-gap: 30px;
@@ -83,7 +89,7 @@ a {
 
 /* The card container */
 .team-card {
-    height: 320px;
+    height: 350px;
     perspective: 1000px;
 }
 
@@ -92,17 +98,12 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transdorm 0.7s;
+    transition: transform 0.7s;
     transform-style: preserve-3d;
 }
 
-/* Flips when the checkbox is clicked*/
-.card-toggle:checked + .team-card-inner {
-    transform: rotateX('180deg');
-}
-
 /*Front and back*/
-.team-front
+.team-front,
 .team-back {
     position: absolute;
     inset: 0;
@@ -111,16 +112,82 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+    font-family: "Esteban", serif;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     overflow-wrap: anywhere;
 }
 
-.team img {
+.team-front {
+    background-color: white;
+    padding-top: 20px;
+}
+
+.team-front img {
     width: 100px;
     height: 100px;
     object-fit: contain;
-    margin: 0 auto 15px;
+    margin: 10px;
+    display: block;
+}
+
+.team-front h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 5px 0 15px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-front p {
+    text-align: center;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.team-back {
+    background-color: white;
+    transform: rotateX(180deg);
+}
+
+.team-back h2 {
+    font-size: 20px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.team-back a {
+    margin-top: 10px;
+}
+
+.team-front label {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.back-to-front {
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000;
+}
+
+/* Change the layout when the screen is at least 550px wide */
+@media (min-width: 550px) {
+    .teams {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Change the layout when the screen is at least 900px wide */
+@media (min-width: 900px) {
+    .teams {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
