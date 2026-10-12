@@ -1,14 +1,18 @@
 :root {
-  /* Color vars */
-  --font-color: #000;
+    /* Color vars*/
+    --primary: #c0ade6;
+    --accent: #9683bd;
+    --font-color: #000;
+    --links-color: #2d0067;
 
-
-  /* Space vars */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 32px;
-  --space-xl: 48px;
+    /* Space vars */
+     --space-xxs: 16px;
+     --space-xs: 20px;
+     --space-s: 32px;
+     --space-m: 48px;
+     --space-l: 150px;
+     --space-xl: 350px;
+     --space-xxl: 1100px;
 }
 
 *, *::before, *::after {
@@ -16,21 +20,21 @@
 }
 
 body {
-    background-color: lightblue;
-    margin: 60px;
+    background-color: var(--primary);
+    margin: var(--space-md);
     font-family: "Fjalla One", serif;
 }
 
 header {
     font-family: "Fjalla One", serif;
-    font-size: 48px;
+    font-size: var(--space-m);
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--space-lg) var(--space-xl);
-    background-color: white;
-    border-radius: 20px;
+    padding: var(--space-s) var(--space-m);
+    background-color: var(--accent);
+    border-radius: var(--space-xs);
 }
 
 h1 {
@@ -38,20 +42,18 @@ h1 {
 }
 
 main {
-    background-color: lightblue;
-    padding: 30px;
+    background-color: var(--primary);
+    padding: var(--space-s);
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--font-color);
 }
 
 .about {
-    text-decoration: none;
-    color: black;
-    font-size: 24px;
-
+    font-size: var(--space-s);
+    margin: auto;
 }
 
 /* Hide the checkbox*/
@@ -66,13 +68,12 @@ a {
 
 .logo {
     text-align: center;
-
 }
 
 .team {
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
+    background-color: var(--accent);
+    padding: var(--space-xs);
+    border-radius: var(--space-xs);
     text-align: center;
 }
 
@@ -81,16 +82,15 @@ a {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px 20px;
-    max-width: 1100px;
-    row-gap: 30px;
-    padding: 20px;
+    gap: var(--space-s) var(--space-xs);
+    max-width: var(--space-xxl);
+    padding: var(--space-xs);
 }
 
 /* The card container */
 .team-card {
-    height: 350px;
-    perspective: 1000px;
+    height: var(--space-xl);
+    perspective: var(--space-xxl);
 }
 
 /* Makes the card flip*/
@@ -107,13 +107,12 @@ a {
 .team-back {
     position: absolute;
     inset: 0;
-    padding: 20px;
-    border-radius: 20px;
+    padding: var(--space-xs);
+    border-radius: var(--space-xs);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    text-align: center;
     font-family: "Esteban", serif;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -121,61 +120,70 @@ a {
 }
 
 .team-front {
-    background-color: white;
-    padding-top: 20px;
+    background-color: var(--accent);
+    padding-top: var(--space-xs);
 }
 
 .team-front img {
-    width: 100px;
-    height: 100px;
+    width: var(--space-l);
+    height: var(--space-l);
     object-fit: contain;
-    margin: 10px;
+    margin: var(--space-xs);
     display: block;
 }
 
 .team-front h2 {
-    font-size: 20px;
+    font-size: var(--space-xs);
     text-align: center;
-    margin: 5px 0 15px;
-    min-height: 60px;
+    margin: 0;
+    min-height: var(--space-m);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.team-front p {
+.team-front label {
     text-align: center;
-    font-size: 12px;
     text-decoration: underline;
+    color: var(--links-color);
 }
 
 .team-back {
-    background-color: white;
+    background-color: var(--accent);
     transform: rotateX(180deg);
+    line-height: 1.2;
 }
 
 .team-back h2 {
-    font-size: 20px;
-    margin: 5px 0;
+    font-size: var(--space-xs);
+    margin: 0;
     text-align: center;
 }
 
+.team-back p {
+    line-height: 2;
+    margin: 0;
+}
+
 .team-back a {
-    margin-top: 10px;
+    margin-top: var(--space-xs);
+    text-decoration: underline;
+    font-weight: 00;
+    color: var(--links-color);
 }
 
 .team-front label {
     cursor: pointer;
     text-decoration: underline;
-    font-size: 16px;
-    margin: 20px 0;
+    font-size: var(--space-xxs);
+    margin: var(--space-xs) 0;
 }
 
 .back-to-front {
-    margin-top: 10px;
+    margin-top: var(--space-xs);
     cursor: pointer;
     text-decoration: underline;
-    color: #000;
+    color: var(--links-color);
 }
 
 /* Change the layout when the screen is at least 550px wide */
