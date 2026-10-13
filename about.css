@@ -1,0 +1,102 @@
+:root {
+    /* Color vars*/
+    --primary: #538e62;
+    --accent: #76bd77;
+    --shadow: #416842;
+    --font-color: #000;
+    --links-color: #214b2b;
+
+    /* Space vars */
+     --space-xxs: 16px;
+     --space-xs: 20px;
+     --space-s: 32px;
+     --space-m: 48px;
+     --space-l: 150px;
+     --space-xl: 350px;
+     --space-xxl: 1100px;
+}
+
+/* Makes element sizing easier to control, and including padding and border in the width and height */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary);
+    margin: var(--space-md);
+    font-family: "Fjalla One", serif;
+}
+
+header {
+    font-family: "Fjalla One", serif;
+    font-size: var(--space-m);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s) var(--space-m);
+    background-color: var(--accent);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: var(--space-xs);
+}
+
+main {
+    background-color: var(--primary);
+    padding: var(--space-s);
+}
+
+a {
+    text-decoration: none;
+    color: var(--links-color);
+}
+
+p {
+    margin: var(--space-m);
+    font-family: "Esteban", serif;
+}
+
+.about {
+    text-align: center;
+}
+
+.author {
+    background-color: var(--accent);
+    padding: var(--space-s);
+    border-radius: var(--space-xxs);
+    max-width: var(--space-xxl);
+    margin: 0 auto;
+    box-shadow: 0 6px 12px 0 var(--shadow);
+}
+
+.home {
+    font-size: var(--space-s);
+    margin: 0;
+}
+
+/* Change the layout when the screen is at least 550px wide */
+@media (min-width: 550px) {
+    .teams {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Change the layout when the screen is at least 900px wide */
+@media (min-width: 900px) {
+    .teams {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

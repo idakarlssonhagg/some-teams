@@ -1,9 +1,10 @@
 :root {
     /* Color vars*/
-    --primary: #c0ade6;
-    --accent: #9683bd;
+    --primary: #538e62;
+    --accent: #76bd77;
+    --shadow: #416842;
     --font-color: #000;
-    --links-color: #2d0067;
+    --links-color: #214b2b;
 
     /* Space vars */
      --space-xxs: 16px;
@@ -15,6 +16,7 @@
      --space-xxl: 1100px;
 }
 
+/* Makes element sizing easier to control, and including padding and border in the width and height */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -34,7 +36,6 @@ header {
     align-items: center;
     padding: var(--space-s) var(--space-m);
     background-color: var(--accent);
-    border-radius: var(--space-xs);
 }
 
 h1 {
@@ -48,7 +49,26 @@ main {
 
 a {
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--links-color);
+}
+
+footer {
+    font-family: "Fjalla One", serif;
+    font-size: var(--space-m);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s) var(--space-m);
+    background-color: var(--accent);
+}
+
+p {
+    font-size: var(--space-xxs);
+}
+
+a {
+    font-size: var(--space-xs);
 }
 
 .about {
@@ -117,6 +137,7 @@ a {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     overflow-wrap: anywhere;
+    box-shadow: 0 6px 12px 0 var(--shadow);
 }
 
 .team-front {
@@ -130,6 +151,11 @@ a {
     object-fit: contain;
     margin: var(--space-xs);
     display: block;
+        filter: 
+        drop-shadow(2px 0 0 white)
+        drop-shadow(-2px 0 0 white)
+        drop-shadow(0 2px 0 white)
+        drop-shadow(0 -2px 0 white);
 }
 
 .team-front h2 {

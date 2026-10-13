@@ -98,4 +98,8 @@ include 'data.php';
 
     </main>
 </body>
-<footer></footer>
+<footer>
+    <p>&copy; 2026 Women's Europa Cup</p>
+    <p>Created as a web development school project.</p>
+    <a href="index.php">Back to top</a>
+</footer>
