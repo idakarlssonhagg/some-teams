@@ -45,6 +45,9 @@ h1 {
 main {
     background-color: var(--primary);
     padding: var(--space-s);
+    border: 3px solid white;
+    margin: var(--space-s);
+    position: relative;
 }
 
 a {
@@ -105,12 +108,16 @@ a {
     gap: var(--space-s) var(--space-xs);
     max-width: var(--space-xxl);
     padding: var(--space-xs);
+    position: relative;
+    z-index: 1;
 }
 
 /* The card container */
 .team-card {
     height: var(--space-xl);
     perspective: var(--space-xxl);
+    position: relative;
+    z-index: 1;
 }
 
 /* Makes the card flip*/
@@ -210,6 +217,32 @@ a {
     cursor: pointer;
     text-decoration: underline;
     color: var(--links-color);
+
+}
+
+/* White line across the main section */
+main::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid white;
+    pointer-events: none;
+}
+
+/* Makes a circle in the middle of the line */
+main::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px; 
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 /* Change the layout when the screen is at least 550px wide */
