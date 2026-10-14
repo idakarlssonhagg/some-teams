@@ -120,6 +120,12 @@ a {
     z-index: 1;
 }
 
+.team-card.eliminated .team-front,
+.team-card.eliminated .team-back {
+    opacity: 0.5;
+    border: 3px solid #680c0c;
+}
+
 /* Makes the card flip*/
 .team-card-inner {
     position: relative;

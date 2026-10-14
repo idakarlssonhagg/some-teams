@@ -10,7 +10,9 @@ $teams = [
         'city' => 'Amsterdam',
         'url' => 'https://www.ajax.nl/',
         'logo' => 'https://www.ajax.nl/media/vimnukaa/ajax-klassiek-logo-pms200.svg',
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2604835.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2604835.png',
+        'eliminated' => false
+
     ],
     'Brann' => [
         'league' => 'Toppserien (Norway)',
@@ -19,7 +21,9 @@ $teams = [
         'city' => 'Bergen',
         'url' => 'https://www.brann.no/',
         'logo' => 'https://www.brann.no/resultater/_/image/405ca125-7c3e-4052-88c0-ef89865ed4b1:410b729c5e9affefa4f2386528ae9bb502db9861/wide-72-72/Brann_logo_141616.svg', // fragile hashed URL
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2612267.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2612267.png',
+        'eliminated' => false
+
     ],
     'Brøndby' => [
         'league' => 'A-Liga (Denmark)',
@@ -28,7 +32,9 @@ $teams = [
         'city' => 'Brøndby',
         'url' => 'https://brondby.com/',
         'logo' => 'https://brondby.com/_nuxt/img/logo.a691999.svg', // build-hashed, may break
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/83727.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/83727.png',
+        'eliminated' => false
+
     ],
     'Czarni Sosnowiec' => [
         'league' => 'Ekstraliga (Poland)',
@@ -37,7 +43,9 @@ $teams = [
         'city' => 'Sosnowiec',
         'url' => 'http://www.czarnisosnowiec.eu/',
         'logo' => 'http://www.czarnisosnowiec.eu/images/logo.png', // HTTP only: blocked on HTTPS pages, use logo_uefa
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2603340.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2603340.png',
+        'eliminated' => false
+
     ],
     'Fenerbahçe' => [
         'league' => 'Süper Lig (Turkey)',
@@ -46,7 +54,9 @@ $teams = [
         'city' => 'Istanbul',
         'url' => 'https://www.fenerbahce.org/',
         'logo' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2612244.png', // UEFA pattern, not individually verified
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2612244.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2612244.png',
+        'eliminated' => false
+
     ],
     'Feyenoord' => [
         'league' => 'Vrouwen Eredivisie (Netherlands)',
@@ -55,7 +65,9 @@ $teams = [
         'city' => 'Rotterdam',
         'url' => 'https://www.feyenoord.nl/',
         'logo' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611785.png', // UEFA pattern, not individually verified
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611785.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611785.png',
+        'eliminated' => false
+
     ],
     'Eintracht Frankfurt' => [
         'league' => 'Frauen-Bundesliga (Germany)',
@@ -64,7 +76,9 @@ $teams = [
         'city' => 'Frankfurt am Main',
         'url' => 'https://www.eintracht.de/',
         'logo' => 'https://media.eintracht.de/image/upload/ar_3:2,c_fill,dpr_1.0,f_auto,g_xy_center,q_40,w_1100/sge_standard_logo_rgb-f66c.png', // CDN transform, padded 3:2 crop, may break
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611099.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611099.png',
+        'eliminated' => false
+
     ],
     'Hammarby' => [
         'league' => 'Damallsvenskan (Sweden)',
@@ -73,7 +87,9 @@ $teams = [
         'city' => 'Stockholm',
         'url' => 'https://www.hammarbyfotboll.se/',
         'logo' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2600837.png', // UEFA pattern, not individually verified
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2600837.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2600837.png',
+        'eliminated' => false
+
     ],
     'Malmö FF' => [
         'league' => 'Damallsvenskan (Sweden)',
@@ -82,7 +98,9 @@ $teams = [
         'city' => 'Malmö',
         'url' => 'https://www.mff.se/',
         'logo' => 'https://www.mff.se/app/themes/mesta-maestarna/resources/images/mff-logo.svg',
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2613920.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2613920.png',
+        'eliminated' => false
+
     ],
     'PSV' => [
         'league' => 'Vrouwen Eredivisie (Netherlands)',
@@ -91,7 +109,9 @@ $teams = [
         'city' => 'Eindhoven',
         'url' => 'https://www.psv.nl/',
         'logo' => 'https://www.psv.nl/upload_mm/f/2/e/108043_fullimage_logo-psv2020-240x240.png',
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611131.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611131.png',
+        'eliminated' => false
+
     ],
     'Real Sociedad' => [
         'league' => 'Liga F (Spain)',
@@ -100,7 +120,9 @@ $teams = [
         'city' => 'San Sebastián',
         'url' => 'https://www.realsociedad.eus/',
         'logo' => 'https://www.realsociedad.eus/Content/img/Escudo-head.png',
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2601940.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2601940.png',
+        'eliminated' => false
+
     ],
     'Rosenborg' => [
         'league' => 'Toppserien (Norway)',
@@ -109,7 +131,9 @@ $teams = [
         'city' => 'Trondheim',
         'url' => 'https://www.rbk.no/',
         'logo' => 'https://www.rbk.no/_/asset/no.seeds.app.football:0000019ff16ca8d0/img/logo/rbk/logo.png', // version ID in path, may break
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/78160.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/78160.png',
+        'eliminated' => false
+
     ],
     'Sparta Praha' => [
         'league' => '1. liga žen (Czech Republic)',
@@ -118,7 +142,9 @@ $teams = [
         'city' => 'Prague',
         'url' => 'https://sparta.cz/',
         'logo' => 'https://sparta.cz/_next/static/media/sparta-logo.9d66bdc8.svg', // build-hashed, may break
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/81198.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/81198.png',
+        'eliminated' => false
+
     ],
     'Spartak Myjava' => [
         'league' => '1. liga žien (Slovakia)',
@@ -127,7 +153,9 @@ $teams = [
         'city' => 'Myjava',
         'url' => 'https://www.spartakmyjava.sk/',
         'logo' => 'https://e091236de1.clvaw-cdnwnd.com/a374fbdd1de580ca87a69f9715a08851/200000249-c380ec3811/SPARTAK_MYJAVA.png?ph=e091236de1', // Webnode CDN, may block hotlinking
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2607644.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2607644.png',
+        'eliminated' => false
+
     ],
     'Torreense' => [
         'league' => 'Liga BPI (Portugal)',
@@ -136,7 +164,9 @@ $teams = [
         'city' => 'Torres Vedras',
         'url' => 'https://www.torreense.com/',
         'logo' => 'https://www.torreense.com/images/logo.png',
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611345.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2611345.png',
+        'eliminated' => false
+
     ],
     'Wolfsburg' => [
         'league' => 'Frauen-Bundesliga (Germany)',
@@ -145,6 +175,8 @@ $teams = [
         'city' => 'Wolfsburg',
         'url' => 'https://www.vfl-wolfsburg.de/',
         'logo' => 'https://www.vfl-wolfsburg.de/_assets/c6bb6cd0ef4342a474168f76207f5023/assets/logo.svg?c=1778353188', // hash + cache-buster, may break
-        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2600828.png'
+        'logo_uefa' => 'https://img.uefa.com/imgml/TP/teams/logos/240x240/2600828.png',
+        'eliminated' => false
+
     ],
 ];

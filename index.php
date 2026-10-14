@@ -37,7 +37,7 @@ include 'data.php';
         <?php foreach ($teams as $name => $team): ?>
 
             <!--Class for each individual team--> 
-            <div class="team-card"> 
+            <div class="team-card <?=  !empty($team['eliminated']) ? 'eliminated' : '' ?>">
                 <input
                 type="checkbox"
                 id="card-<?= htmlspecialchars($name) ?>"
