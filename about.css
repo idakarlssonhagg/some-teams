@@ -81,10 +81,7 @@ p {
     font-size: var(--space-m);
     margin: 0;
     white-space: nowrap;
-}
-
-.logo {
-    text-align: center;
+        text-align: center;
 }
 
 .aboutLayout {
@@ -111,12 +108,6 @@ p {
     margin: 0 auto;
 }
 
-.home {
-    font-size: var(--space-xs);
-    margin: 0;
-    white-space: nowrap;
-}
-
 /* Change the layout if the screen is smaller than 700px */
 
 @media (min-width: 700px) {
@@ -127,6 +118,5 @@ p {
 
     .avatar {
         width: 350px;
-        height: auto;
     }
 }

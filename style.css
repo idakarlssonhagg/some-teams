@@ -53,7 +53,7 @@ main {
 a {
     text-decoration: none;
     color: var(--links-color);
-    font-size: var(--space-s);
+    font-size: var(--space-xs);
 }
 
 footer {
@@ -71,15 +71,6 @@ p {
     font-size: var(--space-xxs);
 }
 
-a {
-    font-size: var(--space-xs);
-}
-
-.about {
-    font-size: var(--space-s);
-    margin: auto;
-}
-
 /* Hide the checkbox */
 .card-toggle {
     display: none;
@@ -91,13 +82,6 @@ a {
 }
 
 .logo {
-    text-align: center;
-}
-
-.team {
-    background-color: var(--accent);
-    padding: var(--space-xs);
-    border-radius: var(--space-xs);
     text-align: center;
 }
 
@@ -208,7 +192,7 @@ a {
 .team-back a {
     margin-top: var(--space-xs);
     text-decoration: underline;
-    font-weight: 00;
+    font-weight: bold;
     color: var(--links-color);
 }
 
