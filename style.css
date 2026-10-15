@@ -1,7 +1,7 @@
 :root {
-    /* Color vars*/
-    --primary: #538e62;
-    --accent: #76bd77;
+    /* Color vars */
+    --primary: #59b86f;
+    --accent: #4c9a5a;
     --shadow: #416842;
     --font-color: #000;
     --links-color: #214b2b;
@@ -23,7 +23,7 @@
 
 body {
     background-color: var(--primary);
-    margin: var(--space-md);
+    margin: var(--space-m);
     font-family: "Fjalla One", serif;
 }
 
@@ -53,6 +53,7 @@ main {
 a {
     text-decoration: none;
     color: var(--links-color);
+    font-size: var(--space-s);
 }
 
 footer {
@@ -79,12 +80,12 @@ a {
     margin: auto;
 }
 
-/* Hide the checkbox*/
+/* Hide the checkbox */
 .card-toggle {
     display: none;
 }
 
-/* Flips when the checkbox is clicked*/
+/* Flips when the checkbox is clicked */
 .card-toggle:checked + .team-card-inner {
     transform: rotateX(180deg);
 }
@@ -126,7 +127,7 @@ a {
     border: 3px solid #680c0c;
 }
 
-/* Makes the card flip*/
+/* Makes the card flip */
 .team-card-inner {
     position: relative;
     width: 100%;
@@ -135,7 +136,7 @@ a {
     transform-style: preserve-3d;
 }
 
-/*Front and back*/
+/*Front and back */
 .team-front,
 .team-back {
     position: absolute;
@@ -233,7 +234,7 @@ main::after {
     top: 50%;
     left: 0;
     width: 100%;
-    border-top: 2px solid white;
+    border-top: 4px solid white;
     pointer-events: none;
 }
 
@@ -243,7 +244,7 @@ main::before {
     position: absolute;
     width: 180px;
     height: 180px; 
-    border: 2px solid white;
+    border: 4px solid white;
     border-radius: 50%;
     top: 50%;
     left: 50%;

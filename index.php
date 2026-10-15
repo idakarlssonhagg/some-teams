@@ -23,7 +23,8 @@ include 'data.php';
         <div class="logo">Womans Europa Cup</div>
 
         <nav>
-            <a class="about" href="about.php">About</a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
         </nav>  
     </header>
 
@@ -37,7 +38,7 @@ include 'data.php';
         <?php foreach ($teams as $name => $team): ?>
 
             <!--Class for each individual team--> 
-            <div class="team-card <?=  !empty($team['eliminated']) ? 'eliminated' : '' ?>">
+            <div class="team-card <?= !empty($team['eliminated']) ? 'eliminated' : '' ?>">
                 <input
                 type="checkbox"
                 id="card-<?= htmlspecialchars($name) ?>"
@@ -46,13 +47,11 @@ include 'data.php';
 
                 <div class="team-card-inner">
 
-                <!-- Front of the card -->
                 <div class="team-front">
 
                     <!-- Safely handles special characters -->
                     <h2><?= htmlspecialchars($name) ?></h2>
                     
-                    <!--Includes special caracters-->
                     <img
                         alt="<?= htmlspecialchars($name) ?> logo"
                         src="<?= htmlspecialchars($team['logo_uefa']) ?>"
@@ -64,21 +63,24 @@ include 'data.php';
 
             </div>
 
-            <!--Back of the card -->
             <div class="team-back"> 
 
                 <h2><?= htmlspecialchars($name) ?></h2>
 
                 <p>League: <?= htmlspecialchars($team['league']) ?></p>
                 <p>City: <?= htmlspecialchars($team['city']) ?> </p>
-                <p>UEFA ranking: <?= $team['uefa-coefficient-ranking'] ?></p>
-                <p>League posistion: <?= $team['league-position'] ?></p>
+                <p>UEFA ranking: 
+                    <?= htmlspecialchars((string) ($team['ueda-coefficient-ranking'] ?? 'Not available')); ?>
+                </p>
+                <p>League posistion: 
+                    <?= htmlspecialchars((string) ($team['league-position'] ?? 'Not available')); ?>
+                </p>
                 
-                <!--Open the link in a new webbsite-->
+                <!--Open the link in a new tab -->
                 <a href="<?= htmlspecialchars ($team['url']) ?>" target="_blank" 
                     rel="noopener noreferrer"> <!-- Open the link in a new tab with extra security and privacy -->
                     
-                    Visit their club website! <!--Don't need a <p> since it's a link-->
+                    Visit their club website!
                 </a>
 
                 <!-- Link to return to the front of the card --> 
@@ -97,9 +99,13 @@ include 'data.php';
 
 
     </main>
+
+        <!-- End of the website with infor and button to the top of the page -->
+    <footer>
+        <p>&copy; 2026 Women's Europa Cup</p>
+        <p>Created as a web development school project.</p>
+        <a href="index.php">Back to top</a>
+    </footer>
+
 </body>
-<footer>
-    <p>&copy; 2026 Women's Europa Cup</p>
-    <p>Created as a web development school project.</p>
-    <a href="index.php">Back to top</a>
-</footer>
+</html>
